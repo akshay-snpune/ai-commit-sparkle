@@ -1,0 +1,84 @@
+================================================================================
+  🚀 AI COMMIT SPARKLE - QUICK START
+================================================================================
+
+Your VS Code extension is complete and ready to publish!
+
+PROJECT LOCATION:
+  ~/Documents/Projects/ai-commit-sparkle/
+
+QUICK COMMANDS:
+================================================================================
+
+1️⃣  PUSH TO GITHUB
+   cd ~/Documents/Projects/ai-commit-sparkle
+   
+   # First, create repo at: https://github.com/new
+   # Name: ai-commit-sparkle
+   # Public, no initialization
+   
+   git remote add origin https://github.com/akshay-snpune/ai-commit-sparkle.git
+   git branch -M main
+   git push -u origin main
+
+2️⃣  GET MARKETPLACE TOKEN
+   • Go to: https://marketplace.visualstudio.com
+   • Click "Publish extensions"
+   • Sign in with GitHub
+   • Go to: https://marketplace.visualstudio.com/manage
+   • Create Publisher: akshay-snpune
+   • Generate PAT at: https://dev.azure.com/_usersSettings/tokens
+   • Scope: Marketplace (manage)
+   • Copy and save your PAT (you won't see it again!)
+
+3️⃣  PUBLISH TO MARKETPLACE
+   npm install -g @vscode/vsce
+   cd ~/Documents/Projects/ai-commit-sparkle
+   vsce publish --pat YOUR_PAT_HERE
+
+   Expected output:
+   ✓ Published akshay-snpune.ai-commit-sparkle@0.1.0
+   ✓ Available on marketplace in 5-15 minutes
+
+4️⃣  VERIFY (Wait 15 mins, then check)
+   https://marketplace.visualstudio.com/items?itemName=akshay-snpune.ai-commit-sparkle
+
+5️⃣  SETUP AUTO-PUBLISHING (Optional)
+   • Go to: https://github.com/akshay-snpune/ai-commit-sparkle/settings/secrets/actions
+   • Create secret: VSCODE_MARKETPLACE_TOKEN = YOUR_PAT
+   • Now: npm version minor && git push origin main --tags
+   • GitHub Actions publishes automatically!
+
+DOCUMENTATION:
+================================================================================
+  • GETTING_STARTED.md  — Complete guide with all details
+  • PUBLISHING.md       — Step-by-step marketplace publishing
+  • README.md           — User documentation
+  • CHANGELOG.md        — Version history
+
+FEATURES:
+================================================================================
+  ✨ Sparkle button in Source Control panel
+  🤖 Ollama (local models) or OpenAI (GPT)
+  📝 Automatic Conventional Commits
+  ⚙️  Full VS Code settings configuration
+  🔐 MIT open-source license
+
+TEST LOCALLY:
+================================================================================
+  cd ~/Documents/Projects/ai-commit-sparkle
+  code .        # Opens in VS Code
+  # Press F5   # Launches debug extension
+  # Stage code: git add .
+  # Click sparkle in SCM panel
+  # Commit message auto-generates!
+
+BUILD/PACKAGE:
+================================================================================
+  npm run build      # Compile TypeScript
+  vsce package       # Create ai-commit-sparkle-0.1.0.vsix
+  npm version patch  # Bump version for next release
+
+================================================================================
+You're ready! Start with Step 1 above. Questions? See GETTING_STARTED.md
+================================================================================
